@@ -1,10 +1,11 @@
-void main(){
- int a= 56;
-  int b=80;
-
+void main (){
+int a = 99;
+int b = 12;
+int c = 111; 
 print(a+b);
 print(a-b);
 print(a*b);
 print(a/b);
 print(a%b);
+
 }
