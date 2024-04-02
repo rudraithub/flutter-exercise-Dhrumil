@@ -14,7 +14,7 @@ void main() {
 
 
    map3.forEach((key, value) {
-    ("$key:$value");
+    print("$key:$value");
   });
   print(map3);
 
