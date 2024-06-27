@@ -29,19 +29,29 @@ class _demoState extends State<demo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: RangeSlider(
-          activeColor: Colors.redAccent,
-          inactiveColor: Colors.blue,
-          labels: RangeLabels(Rvalue.start.toString(), Rvalue.end.toString()),
-          min: 0,
-          max: 200,
-          divisions: 50,
-          values: Rvalue,
-          onChanged: (newvalue) {
-            setState(() {
-            
-            });
-          }),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          RangeSlider(
+              activeColor: Colors.redAccent,
+              inactiveColor: Colors.blue,
+              labels:
+                  RangeLabels(Rvalue.start.toString(), Rvalue.end.toString()),
+              min: 0,
+              max: 200,
+              divisions: 50,
+              values: Rvalue,
+              onChanged: (newvalue) {
+                setState(() {
+                  Rvalue = newvalue;
+                });
+              }),
+          Text(
+            "SLIDER VALUE ====> ${Rvalue}",
+            style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
     );
   }
 }
