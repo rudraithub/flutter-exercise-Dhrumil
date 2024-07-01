@@ -27,26 +27,32 @@ class _demoState extends State<demo> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.pink,
+            backgroundColor:Colors.yellow,
             bottom: TabBar(tabs: [
               Tab(
                 child: Icon(
-                  Icons.forward,
-                  color: Colors.yellow,
+                  Icons.alarm,
+                  color: Color.fromARGB(255, 33, 60, 184),
                 ),
               ),
               Tab(
                 child: Icon(
-                  Icons.search,
+                  Icons.cancel,
                   color: Color.fromARGB(255, 25, 63, 146),
                 ),
               ),
               Tab(
                 child: Icon(
-                  Icons.home,
+                  Icons.new_label,
+                  color: Color.fromARGB(255, 218, 49, 49),
+                ),
+              ),
+              Tab(
+                child: Icon(
+                  Icons.bus_alert,
                   color: Color.fromARGB(255, 3, 12, 138),
                 ),
               ),
@@ -61,7 +67,7 @@ class _demoState extends State<demo> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ElevatedButton(onPressed: () {}, child: Icon(Icons.forward))
+                  ElevatedButton(onPressed: () {}, child: Icon(Icons.forward,color: Colors.black,))
                 ],
               ),
             ),
@@ -70,7 +76,7 @@ class _demoState extends State<demo> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(
-                      onPressed: () {}, child: Icon(Icons.image_search))
+                      onPressed: () {}, child: Icon(Icons.car_crash,color: Colors.black,))
                 ],
               ),
             ),
@@ -79,6 +85,14 @@ class _demoState extends State<demo> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ElevatedButton(onPressed: () {}, child: Icon(Icons.star))
+                ],
+              ),
+            ),
+              Tab(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(onPressed: () {}, child: Icon(Icons.bike_scooter))
                 ],
               ),
             ),
